@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="15.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskmanagement.controller.tasks.TaskManagementController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <!-- Title -->
+    <Label text="My Tasks">
+        <font>
+            <Font name="Arial Bold" size="18.0" />
+        </font>
+    </Label>
+
+    <!-- Tasks Table -->
+    <TableView fx:id="tasksTable" prefHeight="400.0">
+        <columns>
+            <TableColumn fx:id="codeColumn" prefWidth="80.0" text="Code" />
+            <TableColumn fx:id="titleColumn" prefWidth="150.0" text="Title" />
+            <TableColumn fx:id="assignedColumn" prefWidth="120.0" text="Assigned To" />
+            <TableColumn fx:id="phaseColumn" prefWidth="100.0" text="Phase" />
+            <TableColumn fx:id="projectColumn" prefWidth="120.0" text="Project" />
+            <TableColumn fx:id="priorityColumn" prefWidth="80.0" text="Priority" />
+        </columns>
+    </TableView>
+
+    <!-- Message Label -->
+    <Label fx:id="messageLabel" />
+</VBox>

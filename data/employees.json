@@ -1,0 +1,24 @@
+[
+  {
+    "id": "bdc2beec-98d6-444c-bf83-c55d42810d99",
+    "name": "elsaket",
+    "email": "amrelashr@gmalds.com",
+    "phone": "12213",
+    "employeeType": "Developer",
+    "userId": "e4295fe6-09ef-4c26-a62f-946b792e8876",
+    "department": "IT",
+    "salary": 10000.0,
+    "active": true
+  },
+  {
+    "id": "a6b2cb67-3206-4907-a9a0-718da7a97907",
+    "name": "mazen",
+    "email": "amrelashr @gmail.com",
+    "phone": "1235566",
+    "employeeType": "Developer",
+    "userId": "e4295fe6-09ef-4c26-a62f-946b792e8876",
+    "department": "CS",
+    "salary": 100000.0,
+    "active": true
+  }
+]

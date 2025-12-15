@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="15.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskmanagement.controller.employee.TimecardController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <!-- Title -->
+    <Label text="My Timecards">
+        <font>
+            <Font name="Arial Bold" size="18.0" />
+        </font>
+    </Label>
+
+    <!-- Timecards Table -->
+    <TableView fx:id="timecardsTable" prefHeight="300.0">
+        <columns>
+            <TableColumn fx:id="dateColumn" prefWidth="150.0" text="Date" />
+            <TableColumn fx:id="checkInColumn" prefWidth="150.0" text="Check In" />
+            <TableColumn fx:id="checkOutColumn" prefWidth="150.0" text="Check Out" />
+            <TableColumn fx:id="statusColumn" prefWidth="150.0" text="Status" />
+        </columns>
+    </TableView>
+
+    <!-- Add Timecard Section -->
+    <Label text="Add New Timecard">
+        <font>
+            <Font name="Arial Bold" size="14.0" />
+        </font>
+    </Label>
+
+    <GridPane hgap="10.0" vgap="10.0">
+        <columnConstraints>
+            <javafx.scene.layout.ColumnConstraints />
+            <javafx.scene.layout.ColumnConstraints prefWidth="200.0" />
+            <javafx.scene.layout.ColumnConstraints />
+            <javafx.scene.layout.ColumnConstraints prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <javafx.scene.layout.RowConstraints />
+            <javafx.scene.layout.RowConstraints />
+            <javafx.scene.layout.RowConstraints />
+        </rowConstraints>
+
+        <!-- Row 1: Date -->
+        <Label text="Date:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <DatePicker fx:id="datePicker" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Status:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <ComboBox fx:id="statusComboBox" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+        <!-- Row 2: Check In Time -->
+        <Label text="Check In Time:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <HBox spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Spinner fx:id="checkInHourSpinner" prefWidth="60.0" />
+            <Label text=":" />
+            <Spinner fx:id="checkInMinuteSpinner" prefWidth="60.0" />
+        </HBox>
+
+        <Label text="Check Out Time:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <HBox spacing="5.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Spinner fx:id="checkOutHourSpinner" prefWidth="60.0" />
+            <Label text=":" />
+            <Spinner fx:id="checkOutMinuteSpinner" prefWidth="60.0" />
+        </HBox>
+
+        <!-- Row 3: Notes -->
+        <Label text="Notes:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextArea fx:id="notesArea" prefRowCount="3" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" />
+    </GridPane>
+
+    <!-- Button -->
+    <HBox spacing="10.0">
+        <Button fx:id="addTimecardButton" text="Add Timecard" />
+    </HBox>
+
+    <!-- Message Label -->
+    <Label fx:id="messageLabel" />
+</VBox>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="15.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskmanagement.controller.admin.ProjectManagementController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <!-- Title -->
+    <Label text="Project Management">
+        <font>
+            <Font name="Arial Bold" size="18.0" />
+        </font>
+    </Label>
+
+    <!-- Projects Table -->
+    <TableView fx:id="projectsTable" prefHeight="250.0">
+        <columns>
+            <TableColumn fx:id="nameColumn" prefWidth="200.0" text="Project Name" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="300.0" text="Description" />
+            <TableColumn fx:id="statusColumn" prefWidth="100.0" text="Status" />
+        </columns>
+    </TableView>
+
+    <!-- Form Section -->
+    <Label text="Project Details">
+        <font>
+            <Font name="Arial Bold" size="14.0" />
+        </font>
+    </Label>
+
+    <GridPane hgap="10.0" vgap="10.0">
+        <columnConstraints>
+            <javafx.scene.layout.ColumnConstraints />
+            <javafx.scene.layout.ColumnConstraints prefWidth="300.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <javafx.scene.layout.RowConstraints />
+            <javafx.scene.layout.RowConstraints />
+            <javafx.scene.layout.RowConstraints />
+        </rowConstraints>
+
+        <!-- Project Name -->
+        <Label text="Project Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <!-- Description -->
+        <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextArea fx:id="descriptionArea" prefRowCount="4" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <!-- Status -->
+        <Label text="Status:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <ComboBox fx:id="statusComboBox" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    </GridPane>
+
+    <!-- Buttons -->
+    <HBox spacing="10.0">
+        <Button fx:id="addButton" text="Add Project" />
+        <Button fx:id="updateButton" text="Update Project" />
+        <Button fx:id="deleteButton" text="Delete Project" />
+    </HBox>
+
+    <!-- Message Label -->
+    <Label fx:id="messageLabel" />
+</VBox>

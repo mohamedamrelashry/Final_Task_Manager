@@ -1,0 +1,35 @@
+[
+  {
+    "id": "f4e25553-2a6d-4a0f-98ee-f72aa32a92c4",
+    "name": "elsaket",
+    "email": "amfm@elfj",
+    "phone": "1111",
+    "employeeType": "QA",
+    "userId": "63c39a27-b68f-495a-bf8b-4bd33748ee0a",
+    "department": "IS",
+    "salary": 10000.0,
+    "active": true
+  },
+  {
+    "id": "4265881d-59b8-41e3-8389-d3ec9a6fac39",
+    "name": "Elbaz",
+    "email": "amrr@gm",
+    "phone": "1111",
+    "employeeType": "Developer",
+    "userId": "63c39a27-b68f-495a-bf8b-4bd33748ee0a",
+    "department": "",
+    "salary": 2000000.0,
+    "active": true
+  },
+  {
+    "id": "b1ebd167-7cc9-4a5c-81be-effb832944e2",
+    "name": "mafeesh",
+    "email": "Amr@dffs.cpom",
+    "phone": "1234565r4ew",
+    "employeeType": "Designer",
+    "userId": "63c39a27-b68f-495a-bf8b-4bd33748ee0a",
+    "department": "View",
+    "salary": 33000.0,
+    "active": true
+  }
+]

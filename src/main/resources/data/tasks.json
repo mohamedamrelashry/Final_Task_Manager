@@ -1,0 +1,72 @@
+[
+  {
+    "code": "101",
+    "title": "calender",
+    "description": "building a calender for elsheihk",
+    "assignedEmployeeId": "f4e25553-2a6d-4a0f-98ee-f72aa32a92c4",
+    "taskPhase": "PENDING",
+    "projectId": "beacf68a-1502-4661-9358-52f74450bb13",
+    "priority": "MEDIUM",
+    "creatorId": "e319444c-0d23-45e1-876c-c79ac3e91556",
+    "startDate": "2025-12-11T11:50:47.1188447",
+    "endDate": "2025-12-18T11:50:47.1188447",
+    "estimationHours": 10.0,
+    "actualHours": 0.0
+  },
+  {
+    "code": "102",
+    "title": "mohamed",
+    "description": "wait  a minute .",
+    "assignedEmployeeId": "f4e25553-2a6d-4a0f-98ee-f72aa32a92c4",
+    "taskPhase": "EVALUATION",
+    "projectId": "beacf68a-1502-4661-9358-52f74450bb13",
+    "priority": "MEDIUM",
+    "creatorId": "e319444c-0d23-45e1-876c-c79ac3e91556",
+    "startDate": "2025-12-11T11:57:52.4275062",
+    "endDate": "2025-12-18T11:57:52.4275062",
+    "estimationHours": 1000.0,
+    "actualHours": 0.0
+  },
+  {
+    "code": "001",
+    "title": "finishing it",
+    "description": "flsjflsfjsdlfjdslfjfdfjslfe",
+    "assignedEmployeeId": "4265881d-59b8-41e3-8389-d3ec9a6fac39",
+    "taskPhase": "PENDING",
+    "projectId": "beacf68a-1502-4661-9358-52f74450bb13",
+    "priority": "MEDIUM",
+    "creatorId": "63c39a27-b68f-495a-bf8b-4bd33748ee0a",
+    "startDate": "2025-12-11T13:15:32.3560309",
+    "endDate": "2025-12-18T13:15:32.3560309",
+    "estimationHours": 10.0,
+    "actualHours": 0.0
+  },
+  {
+    "code": "12",
+    "title": "Building fxml for timeCardview",
+    "description": "",
+    "assignedEmployeeId": "4265881d-59b8-41e3-8389-d3ec9a6fac39",
+    "taskPhase": "TEST",
+    "projectId": "beacf68a-1502-4661-9358-52f74450bb13",
+    "priority": "CRITICAL",
+    "creatorId": "e319444c-0d23-45e1-876c-c79ac3e91556",
+    "startDate": "2025-12-11T14:37:58.5974506",
+    "endDate": "2025-12-18T14:37:58.5974506",
+    "estimationHours": 100.0,
+    "actualHours": 0.0
+  },
+  {
+    "code": "1000",
+    "title": "done",
+    "description": "lets play",
+    "assignedEmployeeId": "b1ebd167-7cc9-4a5c-81be-effb832944e2",
+    "taskPhase": "EVALUATION",
+    "projectId": "beacf68a-1502-4661-9358-52f74450bb13",
+    "priority": "MEDIUM",
+    "creatorId": "e319444c-0d23-45e1-876c-c79ac3e91556",
+    "startDate": "2025-12-11T14:43:08.6608077",
+    "endDate": "2025-12-18T14:43:08.6608077",
+    "estimationHours": 100.0,
+    "actualHours": 0.0
+  }
+]

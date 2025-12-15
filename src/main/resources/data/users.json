@@ -1,0 +1,26 @@
+[
+  {
+    "id": "e319444c-0d23-45e1-876c-c79ac3e91556",
+    "username": "admin",
+    "password": "$2a$10$u03cJ3dcS3cp8kTtcBukw.UHhqjaAM40VxjRto6VKvY4LhAWfImEW",
+    "role": "ADMIN",
+    "email": "admin@taskmanagement.com",
+    "active": true
+  },
+  {
+    "id": "63c39a27-b68f-495a-bf8b-4bd33748ee0a",
+    "username": "amino",
+    "password": "$2a$10$AwYUypg1Padu6KzQd8J3ZeCCEjlOvaUtxmnQ/6fKbTdO8c/81lB62",
+    "role": "LEADER",
+    "email": "amrelashry8000@gmail.com",
+    "active": true
+  },
+  {
+    "id": "5ca43686-d91e-4ac9-b532-1aa008780c1c",
+    "username": "Elsaket",
+    "password": "$2a$10$fY/KP8H45fAdDug9P1xciezNTNfHATbkCKOl0SPVuCnnLt0cP2hHe",
+    "role": "EMPLOYEE",
+    "email": "elsaket@gmail",
+    "active": true
+  }
+]

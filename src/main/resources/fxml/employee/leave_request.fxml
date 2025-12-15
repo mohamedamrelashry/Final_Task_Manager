@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="15.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskmanagement.controller.employee.LeaveRequestController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <!-- Title -->
+    <Label text="Leave Requests">
+        <font>
+            <Font name="Arial Bold" size="18.0" />
+        </font>
+    </Label>
+
+    <!-- Leave Requests Table -->
+    <TableView fx:id="leaveRequestsTable" prefHeight="300.0">
+        <columns>
+            <TableColumn fx:id="leaveTypeColumn" prefWidth="120.0" text="Leave Type" />
+            <TableColumn fx:id="startDateColumn" prefWidth="120.0" text="Start Date" />
+            <TableColumn fx:id="endDateColumn" prefWidth="120.0" text="End Date" />
+            <TableColumn fx:id="statusColumn" prefWidth="120.0" text="Status" />
+        </columns>
+    </TableView>
+
+    <!-- Submit Leave Request Section -->
+    <Label text="Submit New Leave Request">
+        <font>
+            <Font name="Arial Bold" size="14.0" />
+        </font>
+    </Label>
+
+    <GridPane hgap="10.0" vgap="10.0">
+        <columnConstraints>
+            <javafx.scene.layout.ColumnConstraints />
+            <javafx.scene.layout.ColumnConstraints prefWidth="200.0" />
+            <javafx.scene.layout.ColumnConstraints />
+            <javafx.scene.layout.ColumnConstraints prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <javafx.scene.layout.RowConstraints />
+            <javafx.scene.layout.RowConstraints />
+            <javafx.scene.layout.RowConstraints />
+        </rowConstraints>
+
+        <!-- Row 1: Leave Type -->
+        <Label text="Leave Type:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <ComboBox fx:id="leaveTypeComboBox" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <!-- Row 2: Dates -->
+        <Label text="Start Date:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <DatePicker fx:id="startDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="End Date:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <DatePicker fx:id="endDatePicker" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+        <!-- Row 3: Reason -->
+        <Label text="Reason:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextArea fx:id="reasonArea" prefRowCount="3" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" />
+    </GridPane>
+
+    <!-- Button -->
+    <HBox spacing="10.0">
+        <Button fx:id="submitButton" text="Submit Request" />
+    </HBox>
+
+    <!-- Message Label -->
+    <Label fx:id="messageLabel" />
+</VBox>

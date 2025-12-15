@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="15.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskmanagement.controller.employee.MissionRequestController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <!-- Title -->
+    <Label text="Mission &amp; Permission Requests">
+        <font>
+            <Font name="Arial Bold" size="18.0" />
+        </font>
+    </Label>
+
+    <!-- Requests Table -->
+    <TableView fx:id="requestsTable" prefHeight="300.0">
+        <columns>
+            <TableColumn fx:id="typeColumn" prefWidth="100.0" text="Type" />
+            <TableColumn fx:id="dateColumn" prefWidth="120.0" text="Date" />
+            <TableColumn fx:id="destinationColumn" prefWidth="150.0" text="Destination" />
+            <TableColumn fx:id="statusColumn" prefWidth="120.0" text="Status" />
+        </columns>
+    </TableView>
+
+    <!-- Submit Request Section -->
+    <Label text="Submit New Request">
+        <font>
+            <Font name="Arial Bold" size="14.0" />
+        </font>
+    </Label>
+
+    <GridPane hgap="10.0" vgap="10.0">
+        <columnConstraints>
+            <javafx.scene.layout.ColumnConstraints />
+            <javafx.scene.layout.ColumnConstraints prefWidth="200.0" />
+            <javafx.scene.layout.ColumnConstraints />
+            <javafx.scene.layout.ColumnConstraints prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <javafx.scene.layout.RowConstraints />
+            <javafx.scene.layout.RowConstraints />
+            <javafx.scene.layout.RowConstraints />
+            <javafx.scene.layout.RowConstraints />
+        </rowConstraints>
+
+        <!-- Row 1: Type and Date -->
+        <Label text="Request Type:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <ComboBox fx:id="requestTypeComboBox" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Date:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <DatePicker fx:id="datePicker" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+        <!-- Row 2: Time -->
+        <Label text="Start Time:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <HBox spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Spinner fx:id="startHourSpinner" prefWidth="60.0" />
+            <Label text=":" />
+            <Spinner fx:id="startMinuteSpinner" prefWidth="60.0" />
+        </HBox>
+
+        <Label text="End Time:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <HBox spacing="5.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Spinner fx:id="endHourSpinner" prefWidth="60.0" />
+            <Label text=":" />
+            <Spinner fx:id="endMinuteSpinner" prefWidth="60.0" />
+        </HBox>
+
+        <!-- Row 3: Destination -->
+        <Label text="Destination:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="destinationField" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" />
+
+        <!-- Row 4: Purpose -->
+        <Label text="Purpose:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextArea fx:id="purposeArea" prefRowCount="3" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+    </GridPane>
+
+    <!-- Button -->
+    <HBox spacing="10.0">
+        <Button fx:id="submitButton" text="Submit Request" />
+    </HBox>
+
+    <!-- Message Label -->
+    <Label fx:id="messageLabel" />
+</VBox>

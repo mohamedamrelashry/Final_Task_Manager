@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="15.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskmanagement.controller.tasks.CreateTaskController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <!-- Title -->
+    <Label text="Create New Task">
+        <font>
+            <Font name="Arial Bold" size="18.0" />
+        </font>
+    </Label>
+
+    <!-- Form -->
+    <GridPane hgap="10.0" vgap="10.0">
+        <columnConstraints>
+            <javafx.scene.layout.ColumnConstraints />
+            <javafx.scene.layout.ColumnConstraints prefWidth="200.0" />
+            <javafx.scene.layout.ColumnConstraints />
+            <javafx.scene.layout.ColumnConstraints prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <javafx.scene.layout.RowConstraints />
+            <javafx.scene.layout.RowConstraints />
+            <javafx.scene.layout.RowConstraints />
+            <javafx.scene.layout.RowConstraints />
+            <javafx.scene.layout.RowConstraints />
+        </rowConstraints>
+
+        <!-- Row 1: Code and Title -->
+        <Label text="Task Code:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="codeField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Title:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <TextField fx:id="titleField" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+        <!-- Row 2: Description -->
+        <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextArea fx:id="descriptionArea" prefRowCount="3" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+
+        <!-- Row 3: Assigned and Phase -->
+        <Label text="Assigned To:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <ComboBox fx:id="assignedComboBox" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Phase:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <ComboBox fx:id="phaseComboBox" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+        <!-- Row 4: Project and Priority -->
+        <Label text="Project:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <ComboBox fx:id="projectComboBox" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Label text="Priority:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+        <ComboBox fx:id="priorityComboBox" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+        <!-- Row 5: Dates and Hours -->
+        <Label text="Start Date:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <DatePicker fx:id="startDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+        <Label text="End Date:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+        <DatePicker fx:id="endDatePicker" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+    </GridPane>
+
+    <!-- Estimation Hours -->
+    <HBox spacing="10.0">
+        <Label text="Estimation Hours:" />
+        <TextField fx:id="estimationHoursField" prefWidth="100.0" />
+    </HBox>
+
+    <!-- Buttons -->
+    <HBox spacing="10.0">
+        <Button fx:id="createButton" text="Create Task" />
+        <Button fx:id="cancelButton" text="Clear Form" />
+    </HBox>
+
+    <!-- Message Label -->
+    <Label fx:id="messageLabel" />
+</VBox>

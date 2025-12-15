@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="15.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskmanagement.controller.tasks.TaskLogController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <!-- Title -->
+    <Label text="Task Logs (Time Tracking)">
+        <font>
+            <Font name="Arial Bold" size="18.0" />
+        </font>
+    </Label>
+
+    <!-- Task Logs Table -->
+    <TableView fx:id="taskLogsTable" prefHeight="300.0">
+        <columns>
+            <TableColumn fx:id="taskColumn" prefWidth="150.0" text="Task Code" />
+            <TableColumn fx:id="employeeColumn" prefWidth="150.0" text="Employee" />
+            <TableColumn fx:id="fromTimeColumn" prefWidth="150.0" text="From Time" />
+            <TableColumn fx:id="toTimeColumn" prefWidth="150.0" text="To Time" />
+            <TableColumn fx:id="durationColumn" prefWidth="100.0" text="Duration (hrs)" />
+        </columns>
+    </TableView>
+
+    <!-- Add Log Section -->
+    <Label text="Add New Log">
+        <font>
+            <Font name="Arial Bold" size="14.0" />
+        </font>
+    </Label>
+
+    <GridPane hgap="10.0" vgap="10.0">
+        <columnConstraints>
+            <javafx.scene.layout.ColumnConstraints />
+            <javafx.scene.layout.ColumnConstraints prefWidth="200.0" />
+            <javafx.scene.layout.ColumnConstraints />
+            <javafx.scene.layout.ColumnConstraints prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <javafx.scene.layout.RowConstraints />
+            <javafx.scene.layout.RowConstraints />
+        </rowConstraints>
+
+        <!-- Row 1 -->
+        <Label text="Task:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <ComboBox fx:id="taskComboBox" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Employee:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <ComboBox fx:id="employeeComboBox" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+        <!-- Row 2 -->
+        <Label text="Date:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <DatePicker fx:id="logDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    </GridPane>
+
+    <!-- Time Section -->
+    <Label text="Time">
+        <font>
+            <Font name="Arial Bold" size="12.0" />
+        </font>
+    </Label>
+
+    <HBox spacing="20.0">
+        <Label text="From:" />
+        <Spinner fx:id="fromHourSpinner" prefWidth="60.0" />
+        <Label text=":" />
+        <Spinner fx:id="fromMinuteSpinner" prefWidth="60.0" />
+
+        <Label text="To:" />
+        <Spinner fx:id="toHourSpinner" prefWidth="60.0" />
+        <Label text=":" />
+        <Spinner fx:id="toMinuteSpinner" prefWidth="60.0" />
+
+        <Button fx:id="addLogButton" text="Add Log" />
+    </HBox>
+
+    <!-- Message Label -->
+    <Label fx:id="messageLabel" />
+</VBox>

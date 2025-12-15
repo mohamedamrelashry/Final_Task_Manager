@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="15.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskmanagement.controller.admin.UserManagementController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <!-- Title -->
+    <Label text="User Management">
+        <font>
+            <Font name="Arial Bold" size="18.0" />
+        </font>
+    </Label>
+
+    <!-- Users Table -->
+    <TableView fx:id="usersTable" prefHeight="300.0">
+        <columns>
+            <TableColumn fx:id="usernameColumn" prefWidth="150.0" text="Username" />
+            <TableColumn fx:id="roleColumn" prefWidth="100.0" text="Role" />
+            <TableColumn fx:id="emailColumn" prefWidth="200.0" text="Email" />
+            <TableColumn fx:id="activeColumn" prefWidth="80.0" text="Active" />
+        </columns>
+    </TableView>
+
+    <!-- Form Section -->
+    <Label text="User Details">
+        <font>
+            <Font name="Arial Bold" size="14.0" />
+        </font>
+    </Label>
+
+    <GridPane hgap="10.0" vgap="10.0">
+        <columnConstraints>
+            <javafx.scene.layout.ColumnConstraints />
+            <javafx.scene.layout.ColumnConstraints prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <javafx.scene.layout.RowConstraints />
+            <javafx.scene.layout.RowConstraints />
+            <javafx.scene.layout.RowConstraints />
+            <javafx.scene.layout.RowConstraints />
+            <javafx.scene.layout.RowConstraints />
+        </rowConstraints>
+
+        <!-- Username -->
+        <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <!-- Password -->
+        <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <!-- Role -->
+        <Label text="Role:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <ComboBox fx:id="roleComboBox" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <!-- Email -->
+        <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <!-- Active -->
+        <Label text="Active:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <CheckBox fx:id="activeCheckBox" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    </GridPane>
+
+    <!-- Buttons -->
+    <HBox spacing="10.0">
+        <Button fx:id="addButton" text="Add User" />
+        <Button fx:id="updateButton" text="Update User" />
+        <Button fx:id="deleteButton" text="Delete User" />
+    </HBox>
+
+    <!-- Message Label -->
+    <Label fx:id="messageLabel" />
+</VBox>

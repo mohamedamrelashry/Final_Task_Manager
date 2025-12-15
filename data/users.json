@@ -1,0 +1,18 @@
+[
+  {
+    "id": "e4295fe6-09ef-4c26-a62f-946b792e8876",
+    "username": "admin",
+    "password": "$2a$10$s.CiZL8UMli/2NtrBxwWZeUsKlsm9fMi9Kfi7lEpFdFYLrrDOttK2",
+    "role": "ADMIN",
+    "email": "admin@taskmanagement.com",
+    "active": true
+  },
+  {
+    "id": "8fc864f1-1167-458d-b45b-ac31ead859a2",
+    "username": "amino",
+    "password": "$2a$10$bBlf.LBVLdoudmMRRrScdOGnkv/5hCpRUqgnBm40HswG09gmGJD3m",
+    "role": "LEADER",
+    "email": "amrelashry",
+    "active": true
+  }
+]

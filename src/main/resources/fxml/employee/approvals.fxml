@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="15.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskmanagement.controller.employee.ApprovalController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <!-- Title -->
+    <Label text="Request Approvals">
+        <font>
+            <Font name="Arial Bold" size="18.0" />
+        </font>
+    </Label>
+
+    <!-- Tab Pane -->
+    <TabPane fx:id="requestTabPane" tabClosingPolicy="UNAVAILABLE">
+        <!-- Leave Requests Tab -->
+        <Tab fx:id="leaveRequestsTab" text="Leave Requests">
+            <VBox spacing="10.0" style="-fx-padding: 10;">
+                <!-- Leave Requests Table -->
+                <TableView fx:id="leaveRequestsTable" prefHeight="300.0">
+                    <columns>
+                        <TableColumn fx:id="leaveEmployeeColumn" prefWidth="120.0" text="Employee" />
+                        <TableColumn fx:id="leaveTypeColumn" prefWidth="120.0" text="Leave Type" />
+                        <TableColumn fx:id="leaveStartColumn" prefWidth="120.0" text="Start Date" />
+                        <TableColumn fx:id="leaveEndColumn" prefWidth="120.0" text="End Date" />
+                        <TableColumn fx:id="leaveStatusColumn" prefWidth="100.0" text="Status" />
+                    </columns>
+                </TableView>
+
+                <!-- Notes Section -->
+                <Label text="Rejection Notes (if applicable):" />
+                <TextArea fx:id="leaveNotesArea" prefRowCount="3" wrapText="true" />
+
+                <!-- Buttons -->
+                <HBox spacing="10.0">
+                    <Button fx:id="approveLeaveButton" text="Approve" />
+                    <Button fx:id="rejectLeaveButton" text="Reject" />
+                </HBox>
+            </VBox>
+        </Tab>
+
+        <!-- Mission Requests Tab -->
+        <Tab fx:id="missionRequestsTab" text="Mission/Permission Requests">
+            <VBox spacing="10.0" style="-fx-padding: 10;">
+                <!-- Mission Requests Table -->
+                <TableView fx:id="missionRequestsTable" prefHeight="300.0">
+                    <columns>
+                        <TableColumn fx:id="missionEmployeeColumn" prefWidth="120.0" text="Employee" />
+                        <TableColumn fx:id="missionTypeColumn" prefWidth="120.0" text="Type" />
+                        <TableColumn fx:id="missionDateColumn" prefWidth="120.0" text="Date" />
+                        <TableColumn fx:id="missionStatusColumn" prefWidth="120.0" text="Status" />
+                    </columns>
+                </TableView>
+
+                <!-- Notes Section -->
+                <Label text="Rejection Notes (if applicable):" />
+                <TextArea fx:id="missionNotesArea" prefRowCount="3" wrapText="true" />
+
+                <!-- Buttons -->
+                <HBox spacing="10.0">
+                    <Button fx:id="approveMissionButton" text="Approve" />
+                    <Button fx:id="rejectMissionButton" text="Reject" />
+                </HBox>
+            </VBox>
+        </Tab>
+    </TabPane>
+
+    <!-- Message Label -->
+    <Label fx:id="messageLabel" />
+</VBox>
